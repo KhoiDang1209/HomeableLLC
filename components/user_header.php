@@ -15,7 +15,7 @@
     </div>
     <div class="nav nav-2">
         <section class="flex">
-        <div id="menu-btn" class="fas fa-bars">
+        <div id="menu-btn" class="fas fa-bars"></div>
             
             <div class="menu">
                 <ul>
@@ -36,12 +36,24 @@
                         <ul>
                             <li><a href="about.php">About Us</a></li>
                             <li><a href="contact.php">contact</a></li>
-                            <li><a href="listings.php#faq">FAQ</a></li>
+                            <li><a href="contact.php#faq">FAQ</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
-        </div>
+            <ul>
+                <li><a href="saved.php">Saved<i class="fa fa-heart"></i></a></li>
+                    <li><a href="#">Account <li class="fas fa-angle-down"></i> </a>
+                        <ul>
+                        <li><a href="login.php">Login</a></li>
+                        <li><a href="register.php">Register</a></li>                            
+                        <?php if($user_id !=''){?>
+                        <li><a href="update.php">Update Profile</a></li>    
+                        <li><a href="components/user_logout.php" onclick="return confirm('Log out from this website?')">Logout</a>  
+                        <?php }?></li>  
+                    </ul>
+                </li> 
+            </ul>
         </section>
     </div>
 
